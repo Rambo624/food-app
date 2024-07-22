@@ -1,0 +1,15 @@
+.card{
+   margin: 25px;
+   border: none;
+}
+
+.card:hover{
+    border: 1px solid;
+    scale: 1.05;
+}
+
+
+.card-img-top{
+    
+    height: 250px;
+}
