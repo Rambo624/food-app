@@ -7,6 +7,7 @@ import About from './Components/About';
 import Error from './Components/Error';
 import Offers from './Components/Offers';
 import Api from './Components/api';
+import RestaurantMenu from './Components/RestaurantMenu';
 
 
 function App() {
@@ -39,7 +40,11 @@ const appRouter = createBrowserRouter([
   {
     path:"/help/:resId",
     element: <Api/>
-  }],
+  },
+{
+  path:"/menu/:resID",
+  element:<RestaurantMenu/>
+}],
     errorElement: <Error />
   },
 

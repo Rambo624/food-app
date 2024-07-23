@@ -74,7 +74,7 @@ const RestaurantCardPromoted = withPromotedLabel(CArd)
 
       <div className='flex flex-wrap justify-between'>{
         filterRestaurants.map((restaurant) => (
-          <Link key={restaurant.info.id} to={`/help/${restaurant.info.id}`}>
+          <Link key={restaurant.info.id} to={`/menu/${restaurant.info.id}`}>
             {restaurant.info.promoted ? <RestaurantCardPromoted resData={restaurant.info}/>:<CArd resData={restaurant.info}/>}
        
           

@@ -25,7 +25,7 @@ export const withPromotedLabel= (CArd)=>{
     return()=>{
         return(
         <div className='relative'>
-            <label className='text-white absolute top-5 z-10 left-8 p-1 bg-black rounded-lg'>Promoted</label>
+            <label className='text-white absolute top-5 z-10 left-8 p-1 bg-black rounded-lg hover:scale[1.1]'>Promoted</label>
             <CArd/>
         </div>
         )
