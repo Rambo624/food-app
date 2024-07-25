@@ -4,9 +4,8 @@ import { useDispatch } from "react-redux"
 
 
 
-function ItemList(items) {
-    console.log(items.info)
-    const item = items.info
+function CartItems({items}) {
+  
 
     const dispatch=useDispatch()
 function handleAddItem(item){
@@ -17,7 +16,7 @@ dispatch(addItem(item))
 
     return (
         <div className=" w-[50%]  mx-auto">
-            {item.map((i) => {
+            {items.map((i) => {
                 
                 return <div key={i.card.info.id} className="ml-0 pl-1  flex justify-between  border-b-2 my-3" >
                     <div className="w-9/12">
@@ -41,4 +40,4 @@ dispatch(addItem(item))
     )
 }
 
-export default ItemList
+export default CartItems

@@ -21,7 +21,7 @@ const RestaurantCardPromoted = withPromotedLabel(CArd)
     const data = await fetch(`https://www.swiggy.com/mapi/homepage/getCards?lat=9.9312328&lng=76.267304099999`)
     const json = await data.json()
     console.log(json.data.success)
-    console.log(json.data.success.cards[4].gridWidget.gridElements.infoWithStyle.restaurants[0].info.promoted)
+   /* console.log(json.data.success.cards[4].gridWidget.gridElements.infoWithStyle.restaurants[0].info.promoted)*/
     const resData = json.data.success.cards[4].gridWidget.gridElements.infoWithStyle.restaurants
     console.log( resData)
     setRestaurants(resData)

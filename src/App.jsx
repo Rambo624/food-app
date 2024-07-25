@@ -8,16 +8,23 @@ import Error from './Components/Error';
 import Offers from './Components/Offers';
 import Api from './Components/api';
 import RestaurantMenu from './Components/RestaurantMenu';
+import Cart from './Components/Cart';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 
 function App() {
 
   return (
-    <div>
+    <Provider store={appStore}>
+       <div>
     
-      <Header />
-      <Outlet />
-    </div>
+    <Header />
+    <Outlet />
+  </div>
+  
+    </Provider>
+   
   )
 }
 
@@ -36,6 +43,10 @@ const appRouter = createBrowserRouter([
     {
       path: "/offers",
       element: <Offers />
+    },
+    {
+path:"/cart",
+element:<Cart/>
     },
   {
     path:"/help/:resId",
